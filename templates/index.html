@@ -75,6 +75,33 @@
                     </div>
                 </div>
             </div>
+
+            <!--打卡检查-->
+            <div class="card shadow mt-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">手动考勤检查</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/check_attendance" method="POST">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label class="col-form-label">检查日期：</label>
+                            </div>
+                            <div class="col">
+                                <input type="date" name="date" 
+                                       value="{{ today }}" 
+                                       class="form-control"
+                                       required>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-warning">
+                                    立即检查
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>
